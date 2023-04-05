@@ -1,6 +1,8 @@
 import models.Camareira;
 import models.Cliente;
+import models.EnumTipo;
 import models.Gerente;
+import models.Quarto;
 import models.Recepcionista;
 
 public class App {
@@ -29,5 +31,18 @@ public class App {
     gerente.falarIngles();
     gerente.arrumarACama();
     gerente.limparQuarto();
+
+    Quarto quarto1 = new Quarto();
+    quarto1.setNumero("206A");
+    quarto1.setValor(100.0);
+    quarto1.setTipo(EnumTipo.MASTER);
+
+    Quarto quarto2 = new Quarto();
+    quarto2.setNumero("306A");
+    quarto2.setValor(200.0);
+    quarto2.setTipo(EnumTipo.PRESIDENCIAL);
+
+    System.out.println(quarto2.getTipo());
+    System.out.println(quarto2.getTipo().getValor());
   }
 }
